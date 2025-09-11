@@ -1,7 +1,7 @@
 :root {
     --color-primary: #4B69FD;
     --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
+    --color-tertiary:  #4CAF50;
     --color-button: #fe652b;
     --color-button-hover: #e55720;
     --color-text: #444444;
@@ -107,7 +107,7 @@ body {
 /* Estilos de botón */
 button {
     padding: 15px 30px;
-    font-family: "Inter", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     border: 2px solid #000;
     border-radius: 25px;
@@ -117,14 +117,21 @@ button {
 
 .button-add {
     background-color: var(--color-tertiary);
-    color: var(--color-text);
+    color: #FFFFFF;
     border-radius: 0 25px 25px 0;
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color: #43A047;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+.button-add[disabled] {
+    background-color: #ccc;   /* gris cuando está deshabilitado */
+    color: #666;              /* texto gris para indicar inactividad */
+    cursor: not-allowed;      /* cursor que indica que no se puede clicar */
+    box-shadow: none;         /* quita la sombra */
+}
 /* Listas */
 ul {
     list-style-type: none;
@@ -159,4 +166,9 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+.button-draw[disabled] {
+  background-color: #ccc; /* gris */
+  cursor: not-allowed;
 }
